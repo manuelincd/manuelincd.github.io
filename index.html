@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpolación</title>
+    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="interpolacion.css">
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+
+</head>
+<body>
+    <span class="headercontainer">
+        <header>
+            <h1>Interpolación</h1>
+        </header>
+        <nav class="navheader">
+            <a href="#" class="navheaderbutton">Interpolación lineal y cuadrática</a>
+            <a href="lagrange.html" class="navheaderbutton">Interpolación de Lagrange</a>
+        </nav>
+    </span>
+    <nav class="principal">
+        <h2>Interpolación lineal</h2>
+        <div class="grip-left">
+            <img src="lineal.png">
+            <div class="valores">
+                <div>
+                    <label>X<sub>0</sub> = <input type="number" id="1x0"></label>
+                    <label>f(x<sub>0</sub>) = <input type="number" id="1fx0"></label>
+                    
+                </div>
+                <div>
+                    <label>X<sub>1</sub> = <input type="number" id="1x1"></label>
+                    <label>f(x<sub>1</sub>) = <input type="number" id="1fx1"></label>
+                </div>
+                <div>
+                    <label>X = <input type="number" id="1x"></label>
+                    <label>f(x) = <input class="respuesta" type="number" id="1fx" readonly> aprox</label>
+                </div>
+                <div>
+                    <button onclick="lineal()">Calcular</button>
+                </div>
+            </div>
+        </div>
+        <div class="grip-normal">
+            <div class="valores">
+                <h3> Error verdadero y error relativo porcentual</h3>
+                <div>
+                    <label>Valor verdadero = <input type="number" id="valorverdadero"></label>
+                    <label>E<sub>t</sub> = <input class="respuesta" type="number" id="errorverdadero" readonly></label>
+                    <label>ε<sub>t</sub> = <input class="respuesta" type="number" id="errorrelativo" readonly> %</label>
+                </div>
+                <div>
+                    <button onclick="error()">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <nav class="principal">
+        <h2>Interpolación cuadrática</h2>
+        <div class="grip-left">
+            <img src="cuadratica.png">
+            <div class="valores-cuadratica">
+                <div>
+                    <label>X<sub>0</sub> = <input type="number" id="2x0"></label>
+                    <label>f(x<sub>0</sub>) = <input type="number" id="2fx0"></label>
+                    
+                </div>
+                <div>
+                    <label>X<sub>1</sub> = <input type="number" id="2x1"></label>
+                    <label>f(x<sub>1</sub>) = <input type="number" id="2fx1"></label>
+                </div>
+                <div>
+                    <label>X<sub>2</sub> = <input type="number" id="2x2"></label>
+                    <label>f(x<sub>2</sub>) = <input type="number" id="2fx2"></label>
+                </div>
+                <div>
+                    <label>X = <input type="number" id="2x"></label>
+                    <label>f(x) = <input class="respuesta" type="number" id="2fx" readonly> aprox</label>
+                </div>
+                <div>
+                    <button onclick="cuadratica()">Calcular</button>
+                </div>
+            </div>
+        </div>
+        <div class="grip-normal2">
+            <div class="valores">
+                <h3> Coeficientes del Polinomio de Interpolación Cuadrática</h3>
+                <div>
+                    <label>b<sub>0</sub> = <input class="respuesta" type="number" id="1b0" readonly></label>
+                    <label>b<sub>1</sub> = <input class="respuesta" type="number" id="1b1" readonly></label>
+                    <label>b<sub>2</sub> = <input class="respuesta" type="number" id="1b2" readonly></label>
+                </div>
+            </div>
+        </div>
+        <div class="grip-normal">
+            <div class="valores">
+                <h3> Error verdadero y error relativo porcentual</h3>
+                <div>
+                    <label>Valor verdadero = <input type="number" id="2valorverdadero"></label>
+                    <label>E<sub>t</sub> = <input class="respuesta" type="number" id="2errorverdadero" readonly></label>
+                    <label>ε<sub>t</sub> = <input class="respuesta" type="number" id="2errorrelativo" readonly> %</label>
+                </div>
+                <div>
+                    <button onclick="errorcuadratica()">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<script src="script.js"></script>
+</body>
+</html>

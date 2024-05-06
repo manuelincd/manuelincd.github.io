@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpolación</title>
+    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="interpolacion.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+
+</head>
+<body>
+    <span class="headercontainer">
+        <header>
+            <h1>Interpolación</h1>
+        </header>
+        <nav class="navheader">
+            <a href="index.html" class="navheaderbutton">Interpolación lineal y cuadrática</a>
+            <a href="#" class="navheaderbutton">Interpolación de Lagrange</a>
+        </nav>
+    </span>
+    <nav class="principal">
+        <h2>Interpolación de Lagrange</h2>
+        <div class="grip-left">
+            <img src="lagrange.png">
+            <div class="valores-lagrange">
+                <h3>Primer grado</h3>
+                <div>
+                    <label>X<sub>0</sub> = <input type="number" id="1x0"></label>
+                    <label>f(x<sub>0</sub>) = <input type="number" id="1fx0"></label>
+                    
+                </div>
+                <div>
+                    <label>X<sub>1</sub> = <input type="number" id="1x1"></label>
+                    <label>f(x<sub>1</sub>) = <input type="number" id="1fx1"></label>
+                </div>
+                <div>
+                    <label>X = <input type="number" id="1x"></label>
+                    <label>f<sub>1</sub>(x) = <input class="respuesta" type="number" id="1fx" readonly> aprox</label>
+                </div>
+                <div>
+                    <button onclick="lagrange1()">Calcular</button>
+                </div>
+            </div>
+        </div>
+        <div class="grip-rightamplio">
+            <div class="valores-lagrange2">
+                <h3>Segundo grado</h3>
+                <div>
+                    <label>X<sub>0</sub> = <input type="number" id="2x0"></label>
+                    <label>f(x<sub>0</sub>) = <input type="number" id="2fx0"></label>
+                    
+                </div>
+                <div>
+                    <label>X<sub>1</sub> = <input type="number" id="2x1"></label>
+                    <label>f(x<sub>1</sub>) = <input type="number" id="2fx1"></label>
+                </div>
+                <div>
+                    <label>X<sub>2</sub> = <input type="number" id="2x2"></label>
+                    <label>f(x<sub>2</sub>) = <input type="number" id="2fx2"></label>
+                </div>
+                <div>
+                    <label>X = <input type="number" id="2x"></label>
+                    <label>f<sub>2</sub>(x) = <input class="respuesta" type="number" id="2fx" readonly> aprox</label>
+                </div>
+                <div>
+                    <button onclick="lagrange2()">Calcular</button>
+                </div>
+            </div>
+            <img src="lagrange.png">
+        </div>           
+        <div class="grip-leftamplio">
+            <img src="lagrange.png">
+            <div class="valores-lagrange3">
+                <h3>Tercer grado</h3>
+                <div>
+                    <label>X<sub>0</sub> = <input type="number" id="3x0"></label>
+                    <label>f(x<sub>0</sub>) = <input type="number" id="3fx0"></label>
+                    
+                </div>
+                <div>
+                    <label>X<sub>1</sub> = <input type="number" id="3x1"></label>
+                    <label>f(x<sub>1</sub>) = <input type="number" id="3fx1"></label>
+                </div>
+                <div>
+                    <label>X<sub>2</sub> = <input type="number" id="3x2"></label>
+                    <label>f(x<sub>2</sub>) = <input type="number" id="3fx2"></label>
+                </div>
+                <div>
+                    <label>X<sub>3</sub> = <input type="number" id="3x3"></label>
+                    <label>f(x<sub>3</sub>) = <input type="number" id="3fx3"></label>
+                </div>
+                <div>
+                    <label>X = <input type="number" id="3x"></label>
+                    <label>f<sub>2</sub>(x) = <input class="respuesta" type="number" id="3fx" readonly> aprox</label>
+                </div>
+                <div>
+                    <button onclick="lagrange3()">Calcular</button>
+                </div>
+            </div>
+        </div>           
+        <div class="grip-normal2">
+            <div class="valores">
+                <h3> Error verdadero y error relativo porcentual</h3>
+                <div>
+                    <label>Resultado = <select id="funcion">
+                        <option>f1(x)</option>
+                        <option>f2(x)</option>
+                        <option>f3(x)</option>
+                    </select></label>
+                    <label>Valor verdadero = <input type="number" id="valorverdadero"></label>
+                    <label>E<sub>t</sub> = <input class="respuesta" type="number" id="errorverdadero" readonly></label>
+                    <label>ε<sub>t</sub> = <input class="respuesta" type="number" id="errorrelativo" readonly> %</label>
+                </div>
+                <div>
+                    <button onclick="errorlagrange()">Calcular</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<script src="script.js"></script>
+</body>
+</html>
